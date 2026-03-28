@@ -17,10 +17,11 @@ color:white;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-text-align:center;
-overflow:hidden;
-
+min-height: 100vh;
+text-align: center;  
+overflow-x: hidden;
+overflow-y: auto;
+  
 /* sunset glow */
 background: radial-gradient(circle at center,
 #ff9966,
@@ -190,6 +191,11 @@ function typing(){
 if(i<text.length){
 
 document.getElementById("message").innerHTML+=text.charAt(i)
+
+  window.scrollTO({
+   top: document.body.scrollheght,
+   behavior: "smooth"
+   })  
 
 i++
 
